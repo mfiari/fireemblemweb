@@ -2,27 +2,49 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-    <title>@title</title>
-    <link rel='shortcut icon' type='image/png' href='@routes.Assets.at("images/favicon.png")'>
-    <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))'>
-    <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
-    <style>
-    body {
-        margin-top: 50px;
-    }
-    </style>
-</head>
-<body>
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container-fluid">
-                <a id="titleLink" class="brand" href="/">@title</a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        @content
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>@title</title>
+		<link rel='shortcut icon' type='image/png' href='@routes.Assets.at("images/favicon.png")'>
+		<link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))'>
+		<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+    </head>
+    <body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row">
+						<div class="col-md-12">
+							<header>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="navbar navbar-inverse">
+											<ul class="nav navbar-nav">
+												<li class="active"><a href="/">Accueil</a></li>
+												<li><a href="/desktop">Desktop</a></li>
+												<li><a href="/online">Online</a></li>
+												<li><a href="/news">News</a></li>
+												<li><a href="/">Download</a></li>
+												<li><a href="/">Compte</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</header>
+						</div>
+					</div>
+					<div class="row">
+						@content
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<footer>
+								Site créer par Mike Fiari 2015
+							</footer>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
 </html>
